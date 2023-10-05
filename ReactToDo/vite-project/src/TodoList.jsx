@@ -1,4 +1,4 @@
-import { TodoItem } from "./TodoItem"
+import { TodoListItem } from "./TodoListItem"
 
 export function TodoList({ todos, toggleTodo, deleteTodo }) {
   return (
@@ -6,8 +6,8 @@ export function TodoList({ todos, toggleTodo, deleteTodo }) {
       {todos.length === 0 && "No Todos"}
       {todos.map(todo => {
         return (
-          <TodoItem
-            {...todo} // magic that passes all the props of the todo 
+          <TodoListItem
+            {...todo}
             key={todo.id}
             toggleTodo={toggleTodo}
             deleteTodo={deleteTodo}
